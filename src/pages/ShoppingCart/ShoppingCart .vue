@@ -1,0 +1,146 @@
+<template>
+  <section id="shoppingContainer">
+    <div class="headerWraper bottom-border-1px">
+      <div class="header-search">
+        <span>购物车</span>
+        <a href="javascript:;">
+          <span>领卷</span>
+        </a>
+      </div>
+    </div>
+    <div class="shopping-body">
+      <div>
+        <div class="shoppingContentHeader">
+          <ul class="shoppingHeaderUl">
+            <li class="shoppingHeaderLi">
+              <span>
+                <i class="iconfont icon-yuandian"></i>
+                30天无忧退货
+              </span>
+            </li>
+            <li class="shoppingHeaderLi">
+
+              <span>
+                <i class="iconfont icon-yuandian"></i>
+                48小时快速退货
+              </span>
+            </li>
+            <li class="shoppingHeaderLi">
+              <span>
+                <i class="iconfont icon-yuandian"></i>
+                满88元免邮费
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="shopping-login">
+          <div class="cartShop">
+            <i class="iconfont icon-gouwuche"></i>
+          </div>
+          <div class="ShopText">去添加点什么吧</div>
+          <div class="login" @click="$router.replace('/personal')">登录</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {}
+    }
+  }
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus">
+  @import "../../common/stylus/mixins.styl"
+  #shoppingContainer
+    width  100%
+    height 100%
+    overflow hidden
+    background #f4f4f4
+    .headerWraper
+      width 100%
+      height (176/$rem)
+      position fixed
+      top 0
+      left 0
+      z-index 1
+      background #fff
+      .header-search
+        width 100%
+        height (140/$rem)
+        text-align center
+        >span
+          display inline-block
+          width 20%
+          height (140/$rem)
+          font-size (90/$rem)
+          line-height (160/$rem)
+          margin-left (140/$rem)
+          text-align center
+          vertical-align middle
+        >a
+          >span
+            float: right
+            color #B4282D
+            vertical-align middle
+            margin-top  (60/$rem)
+            margin-right  (100/$rem)
+            margin-left  -(100/$rem)
+            font-size (60/$rem)
+
+    .shopping-body
+      width 100%
+      margin-top  (240/$rem)
+      div
+        width 100%
+
+        .shoppingContentHeader
+          width 100%
+          .shoppingHeaderUl
+            width 100%
+            display flex
+            justify-content space-around
+            .shoppingHeaderLi
+              font-size (24/$rem)
+              >span
+                transform scale(0.3)
+
+
+        .shopping-login
+          width (1200/$rem)
+          height (832/$rem)
+
+          position absolute
+          left 0
+          right 0
+          bottom 0
+          top 0
+          margin auto
+          display flex
+          flex-direction  column
+          .cartShop
+            width 100%
+            height (496/$rem)
+            text-align center
+            .iconfont
+              font-size (496/$rem)
+              color #999
+          .ShopText
+            width 100%
+            text-align center
+            font-size (30/$rem)
+            color #999
+          .login
+            height (200/$rem)
+            width 100%
+            text-align center
+            line-height (184/$rem)
+            font-size (70/$rem)
+            color #fff
+            background-color #b4282d
+            margin-top (80/$rem)
+</style>

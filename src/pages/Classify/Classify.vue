@@ -29,8 +29,6 @@
             </li>
           </ul>
         </div>
-
-
       </div>
     </div>
   </section>
@@ -64,7 +62,7 @@
         this.classifyLeft =new BScroll('.classify-left',{
           click:true,
         })
-        this.classifyLeft =new BScroll('.classify-right',{
+        this.classifyRight =new BScroll('.classify-right',{
           click:true,
         })
       },
@@ -81,15 +79,12 @@
       classify(){
         this.$nextTick(()=>{
           this._initScroll()
-
-
         })
       },
       activeIndex(){
         let {activeIndex} = this;
         this._getPic(activeIndex);
-       /* this.currentArr = this.classify.categoryL1List[activeIndex].subCateList
-        this.currentObj = this.classify.categoryL1List[activeIndex]*/
+
 
       }
     }
